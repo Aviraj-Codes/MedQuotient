@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedQuotient - Medical Insurance Price Predictor</title>
+    <meta name="description" content="Get instant health insurance premium estimates with our AI–powered predictor. Compare costs and discover coverage that fits your needs." />
+    <meta name="author" content="MedQuotient" />
+
+    <meta property="og:title" content="MedQuotient - Medical Insurance Price Predictor" />
+    <meta property="og:description" content="Get instant health insurance premium estimates with our AI–powered predictor. Compare costs and discover coverage that fits your needs." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+        <!-- Hero Section -->
+        <section class="relative py-20 px-4 animate-fade-in">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="flex justify-center mb-6 animate-slide-in-top">
+                    <div class="flex items-center space-x-2 bg-blue-100 px-4 py-2 rounded-full hover:bg-blue-200 transition-colors duration-300 hover:scale-105 transform">
+                        <i data-lucide="heart" class="h-5 w-5 text-blue-600 animate-pulse"></i>
+                        <span class="text-blue-700 font-medium">Trusted by 10,000+ families</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-slide-in-bottom">
+                    Find Your Perfect
+                    <span class="text-blue-600 block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent animate-slide-in-left">Insurance Plan</span>
+                </h1>
+                
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
+                    Get instant health insurance premium estimates with our machine learning–powered predictor. Compare costs and discover coverage that fits your needs.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-12 animate-slide-in-bottom-delayed">
+                    <div class="bg-gray-100 px-4 py-2 text-sm rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-lg flex items-center">
+                        <i data-lucide="shield" class="h-4 w-4 mr-2"></i>
+                        HIPAA Compliant
+                    </div>
+                    <div class="bg-gray-100 px-4 py-2 text-sm rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-lg delay-100 flex items-center">
+                        <i data-lucide="calculator" class="h-4 w-4 mr-2"></i>
+                        Instant Quotes
+                    </div>
+                    <div class="bg-gray-100 px-4 py-2 text-sm rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-lg delay-200 flex items-center">
+                        <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                        Expert Support
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Form Section -->
+        <section class="py-16 px-4 animate-fade-in-slow">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 animate-slide-in-top">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Get Your Personalized Quote</h2>
+                    <p class="text-gray-600">Tell us about yourself to generate a personalized premium estimate.</p>
+                </div>
+
+                <div class="shadow-xl border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-shadow duration-500 animate-slide-in-bottom rounded-lg">
+                    <div class="text-center pb-6 p-8">
+                        <h3 class="text-2xl text-gray-900 font-semibold mb-2">Insurance Calculator</h3>
+                        <p class="text-gray-600">Your information is securely processed and kept strictly confidential.</p>
+                    </div>
+                    
+                    <div class="p-8 pt-0">
+                        <form id="insuranceForm" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2 animate-fade-in-500">
+                                    <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                                    <input id="age" type="number" placeholder="Enter your age"class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300" required/>
+                                </div>
+                                <div class="space-y-2 animate-fade-in-600">
+                                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                                    <select id="gender" class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300" required>
+                                        <option value="">Select gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-2 animate-fade-in-700">
+                                    <label for="bmi" class="block text-sm font-medium text-gray-700">BMI</label>
+                                    <input id="bmi" type="number" step="0.1" placeholder="Enter your BMI"
+                                        class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300"
+                                        min="15" max="50" required/>
+                                </div>
+
+                                <div class="space-y-2 animate-fade-in-800">
+                                    <label for="children" class="block text-sm font-medium text-gray-700">Number of Children</label>
+                                    <select id="children" class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300" required>
+                                        <option value="">Select number</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4+</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-2 animate-fade-in-900">
+                                    <label for="smoker" class="block text-sm font-medium text-gray-700">Smoker</label>
+                                    <select id="smoker" class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300" required>
+                                        <option value="">Select status</option>
+                                        <option value="no">Non-smoker</option>
+                                        <option value="yes">Smoker</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-2 animate-fade-in-1000">
+                                    <label for="region" class="block text-sm font-medium text-gray-700">Region</label>
+                                    <select id="region" class="w-full h-12 px-3 py-2 border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300" required>
+                                        <option value="">Select region</option>
+                                        <option value="northeast">Northeast</option>
+                                        <option value="northwest">Northwest</option>
+                                        <option value="southeast">Southeast</option>
+                                        <option value="southwest">Southwest</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submitBtn"
+                                class="w-full h-14 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg animate-slide-in-bottom-1100 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed">
+                                Get My Quote
+                            </button>
+                        </form>
+
+                        <div id="results" class="mt-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200 animate-slide-in-bottom scale-in hidden">
+                            <div class="text-center">
+                                <i data-lucide="check-circle" class="h-12 w-12 text-green-600 mx-auto mb-4 animate-bounce"></i>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2 animate-fade-in-200">Your Estimated Annual Premium</h3>
+                                <div id="predictionAmount" class="text-4xl font-bold text-green-600 mb-4 animate-scale-in-400">
+                                    ${{Prediction}}
+                                </div>
+                                <p class="text-gray-600 animate-fade-in-600">
+                                    This is an estimate based on your information. Actual premiums may vary.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="toast" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+                            <div class="flex items-center">
+                                <i data-lucide="check" class="h-5 w-5 mr-2"></i>
+                                <div>
+                                    <div class="font-semibold">Prediction Complete!</div>
+                                    <div class="text-sm">Your insurance estimate has been calculated.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 bg-white/50 animate-fade-in-1000">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 animate-slide-in-top">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Platform?</h2>
+                    <p class="text-gray-600">Trusted by thousands of families nationwide</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center animate-slide-in-left hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-blue-200 transition-colors duration-300 hover:shadow-lg">
+                            <i data-lucide="shield" class="h-8 w-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Secure & Private</h3>
+                        <p class="text-gray-600">Your personal information is protected with bank-level security.</p>
+                    </div>
+
+                    <div class="text-center animate-slide-in-bottom hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-green-200 transition-colors duration-300 hover:shadow-lg">
+                            <i data-lucide="calculator" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Accurate Estimates</h3>
+                        <p class="text-gray-600">AI-powered calculations provide reliable premium estimates.</p>
+                    </div>
+
+                    <div class="text-center animate-slide-in-right hover:scale-105 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-purple-200 transition-colors duration-300 hover:shadow-lg">
+                            <i data-lucide="star" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+                        <p class="text-gray-600">Licensed insurance professionals ready to help you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-12 px-4 bg-gray-900 text-white animate-fade-in-1200">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="flex justify-center items-center mb-4 hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="heart" class="h-8 w-8 text-red-500 mr-2 animate-pulse"></i>
+                    <span class="text-2xl font-bold">MedQuotient</span>
+                </div>
+                <p class="text-gray-400 mb-4">Making healthcare affordable and accessible for everyone.</p>
+                <p class="text-sm text-gray-500">
+                    © 2026 MedQuotient. All rights reserved. | Privacy Policy | Terms of Service
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
