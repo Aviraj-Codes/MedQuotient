@@ -54,3 +54,7 @@ The estimated annual insurance cost is displayed in a dedicated results section 
 ## Contributions
 
 Suggestions, issues, and pull requests are welcome. The goal is to improve model performance, interface clarity, and overall application robustness.
+
+## License
+
+This project is licensed under the MIT License – see the LICENSE file for details.
