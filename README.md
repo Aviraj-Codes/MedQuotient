@@ -1,6 +1,6 @@
 # MedQuotient - Medical Insurance Cost Predictor
 
-A Flask-based web application that estimates annual medical insurance charges using a machine learning model trained on the insurance.csv dataset. The project combines a simple backend with a responsive, modern frontend to deliver instant premium estimates from user-provided information.
+A Flask-based web application that estimates annual medical insurance charges using a machine learning model trained on the insurance.csv dataset from Kaggle. The project combines a simple backend with a responsive, modern frontend to deliver instant premium estimates from user-provided information.
 
 ## Overview
 
