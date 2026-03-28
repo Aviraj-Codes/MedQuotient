@@ -6,7 +6,7 @@ A Flask-based web application that estimates annual medical insurance charges us
 
 This application predicts medical insurance costs based on demographic and lifestyle factors. Users enter a small set of details, and the system returns an estimated annual insurance charge calculated by a trained regression model.
 
-The focus is on clarity, usability, and clean integration between machine learning and web technologies.
+The focus here is on clarity, usability, and clean integration between machine learning and web technologies.
 
 ## Core Highlights
 
